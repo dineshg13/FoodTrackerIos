@@ -8,14 +8,17 @@
 
 import UIKit
 
-class ViewController: UIViewController,UITextFieldDelegate {
+class ViewController: UIViewController,UITextFieldDelegate,UIImagePickerControllerDelegate {
 
     @IBOutlet weak var setDefaultLabelText: UIButton!;
+
     
     @IBOutlet weak var nameTextField: UITextField!;
     
     
     @IBOutlet weak var mealNameLabel: UILabel!;
+    
+    @IBOutlet weak var photoViewImage: UIImageView!;
     
     
     override func viewDidLoad() {
@@ -42,6 +45,13 @@ class ViewController: UIViewController,UITextFieldDelegate {
     }
     func textFieldDidEndEditing(textField: UITextField) {
         mealNameLabel.text = textField.text
+    }
+    
+    @IBAction func selectImageFromPhotoLibrary(sender: UITapGestureRecognizer) {
+        // Hide the keyboard.
+        nameTextField.resignFirstResponder();
+        
+        
     }
 }
 

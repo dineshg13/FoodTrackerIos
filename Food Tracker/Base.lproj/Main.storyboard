@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8121.20" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8101.16"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -17,101 +18,75 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9Rc-Li-VTl">
-                                <rect key="frame" x="40" y="64" width="605" height="30"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Dw8-wj-v4f">
+                                <rect key="frame" x="20" y="62" width="560" height="401"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Meal Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jgr-xP-TTN">
-                                        <rect key="frame" x="0.0" y="0.0" width="87" height="30"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                        <variation key="widthClass=compact" fixedFrame="YES">
-                                            <rect key="frame" x="0.0" y="0.0" width="87" height="21"/>
-                                        </variation>
-                                        <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                            <rect key="frame" x="0.0" y="0.0" width="87" height="30"/>
-                                        </variation>
-                                    </label>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" placeholderIntrinsicWidth="360" placeholderIntrinsicHeight="30" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Meal name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="o1g-wh-EcZ">
-                                        <rect key="frame" x="87" y="0.0" width="360" height="30"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                        <variation key="heightClass=regular-widthClass=regular" ambiguous="YES" misplaced="YES">
-                                            <rect key="frame" x="87" y="0.0" width="360" height="30"/>
-                                        </variation>
-                                    </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" placeholderIntrinsicWidth="158" placeholderIntrinsicHeight="30" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bpL-VN-3DJ">
-                                        <rect key="frame" x="447" y="0.0" width="158" height="30"/>
-                                        <state key="normal" title="Set Default Meal Name"/>
-                                        <variation key="widthClass=compact" fixedFrame="YES">
-                                            <rect key="frame" x="0.0" y="51" width="158" height="30"/>
-                                        </variation>
-                                        <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                            <rect key="frame" x="447" y="0.0" width="158" height="30"/>
-                                        </variation>
-                                        <connections>
-                                            <action selector="setDefaultLabelText:" destination="BYZ-38-t0r" eventType="touchUpInside" id="V8l-vr-UKz"/>
-                                        </connections>
-                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="DgS-1Q-iiz">
+                                        <rect key="frame" x="0.0" y="0.0" width="560" height="401"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="zKz-tY-cmo">
+                                                <rect key="frame" x="0.0" y="0.0" width="560" height="401"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Meal Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jgr-xP-TTN">
+                                                        <rect key="frame" x="0.0" y="0.0" width="87" height="21"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" placeholderIntrinsicWidth="900" placeholderIntrinsicHeight="30" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Meal name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="o1g-wh-EcZ">
+                                                        <rect key="frame" x="0.0" y="21" width="560" height="30"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" placeholderIntrinsicWidth="158" placeholderIntrinsicHeight="30" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bpL-VN-3DJ">
+                                                        <rect key="frame" x="0.0" y="51" width="158" height="30"/>
+                                                        <state key="normal" title="Set Default Meal Name"/>
+                                                        <connections>
+                                                            <action selector="setDefaultLabelText:" destination="BYZ-38-t0r" eventType="touchUpInside" id="V8l-vr-UKz"/>
+                                                        </connections>
+                                                    </button>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="320" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="AiX-7I-cVM">
+                                                        <rect key="frame" x="0.0" y="81" width="320" height="320"/>
+                                                        <gestureRecognizers/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="AiX-7I-cVM" secondAttribute="height" multiplier="1:1" id="M9t-iv-ZXP"/>
+                                                        </constraints>
+                                                        <connections>
+                                                            <outletCollection property="gestureRecognizers" destination="Y6p-ac-1Ht" appends="YES" id="FBb-qg-p0P"/>
+                                                        </connections>
+                                                    </imageView>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="o1g-wh-EcZ" secondAttribute="trailing" id="1eT-lM-KnQ"/>
-                                    <constraint firstItem="o1g-wh-EcZ" firstAttribute="leading" secondItem="9Rc-Li-VTl" secondAttribute="leading" id="82g-uR-OVP"/>
-                                </constraints>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="1eT-lM-KnQ"/>
-                                        <exclude reference="82g-uR-OVP"/>
-                                    </mask>
-                                </variation>
-                                <variation key="widthClass=compact" alignment="top" axis="vertical" misplaced="YES">
-                                    <rect key="frame" x="20" y="65" width="360" height="81"/>
-                                    <mask key="constraints">
-                                        <include reference="1eT-lM-KnQ"/>
-                                        <include reference="82g-uR-OVP"/>
-                                    </mask>
-                                </variation>
-                                <variation key="heightClass=regular-widthClass=regular" ambiguous="YES" misplaced="YES">
-                                    <rect key="frame" x="40" y="64" width="605" height="30"/>
-                                </variation>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="9Rc-Li-VTl" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="0K8-Md-2n4"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="9Rc-Li-VTl" secondAttribute="trailing" id="0Kc-1W-Hhz"/>
-                            <constraint firstItem="9Rc-Li-VTl" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="578-l8-1l6"/>
-                            <constraint firstItem="9Rc-Li-VTl" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="60" id="RYo-eF-Hf5"/>
-                            <constraint firstItem="9Rc-Li-VTl" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="x6a-u9-oE2"/>
+                            <constraint firstItem="Dw8-wj-v4f" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="865-9a-Zce"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Dw8-wj-v4f" secondAttribute="trailing" id="Dgh-r7-7GP"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="0K8-Md-2n4"/>
-                                <exclude reference="0Kc-1W-Hhz"/>
-                                <exclude reference="578-l8-1l6"/>
-                                <exclude reference="RYo-eF-Hf5"/>
-                                <exclude reference="x6a-u9-oE2"/>
-                            </mask>
-                        </variation>
-                        <variation key="widthClass=compact">
-                            <mask key="constraints">
-                                <include reference="0K8-Md-2n4"/>
-                                <include reference="0Kc-1W-Hhz"/>
-                                <include reference="578-l8-1l6"/>
-                                <include reference="RYo-eF-Hf5"/>
-                                <include reference="x6a-u9-oE2"/>
-                            </mask>
-                        </variation>
                     </view>
                     <connections>
                         <outlet property="mealNameLabel" destination="jgr-xP-TTN" id="13y-6z-r9P"/>
                         <outlet property="nameTextField" destination="o1g-wh-EcZ" id="JJV-t9-Oo4"/>
+                        <outlet property="photoViewImage" destination="AiX-7I-cVM" id="siZ-be-j0P"/>
                         <outlet property="setDefaultLabelText" destination="bpL-VN-3DJ" id="5OM-YE-fCf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Y6p-ac-1Ht">
+                    <pressTypeMask key="allowedPressTypes"/>
+                    <connections>
+                        <action selector="selectImageFromPhotoLibrary:" destination="BYZ-38-t0r" id="RnY-Ag-5g3"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="304.5" y="415"/>
+            <point key="canvasLocation" x="304" y="415"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Image" width="540" height="540"/>
+    </resources>
 </document>
